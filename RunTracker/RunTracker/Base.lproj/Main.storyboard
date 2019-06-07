@@ -9,43 +9,73 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--First-->
+        <!--Run-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="BeginRunVC" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="112.5" y="312" width="150.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="Mdf-3K-h1F">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BSy-JG-Obd">
+                                <rect key="frame" x="0.0" y="70" width="375" height="420"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x06-2q-7hf">
+                                <rect key="frame" x="169" y="28" width="37" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="90.5" y="363" width="194.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Khb-d2-3l2">
+                                <rect key="frame" x="146" y="595" width="83" height="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxJ-4r-Ovd">
+                                <rect key="frame" x="152" y="512" width="71" height="71"/>
+                                <state key="normal" image="startRunningButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xo1-z5-fkE">
+                                <rect key="frame" x="307" y="419" width="58" height="58"/>
+                                <state key="normal" image="centerNavButton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="Xo1-z5-fkE" firstAttribute="top" secondItem="BSy-JG-Obd" secondAttribute="bottom" constant="-71" id="DE4-jm-HCo"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="Khb-d2-3l2" secondAttribute="bottom" constant="8" id="EJ8-bb-ni7"/>
+                            <constraint firstItem="Mdf-3K-h1F" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="EyM-p2-dmi"/>
+                            <constraint firstItem="x06-2q-7hf" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="8" id="Trd-Nq-6ad"/>
+                            <constraint firstItem="BSy-JG-Obd" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="ZND-Yz-C3e"/>
+                            <constraint firstItem="Mdf-3K-h1F" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="cXb-VQ-m9w"/>
+                            <constraint firstItem="JxJ-4r-Ovd" firstAttribute="top" secondItem="BSy-JG-Obd" secondAttribute="bottom" constant="22" id="cn0-hb-tvd"/>
+                            <constraint firstItem="JxJ-4r-Ovd" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="cp5-A8-fJ5"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Xo1-z5-fkE" secondAttribute="trailing" constant="10" id="gKh-af-mC7"/>
+                            <constraint firstItem="BSy-JG-Obd" firstAttribute="top" secondItem="x06-2q-7hf" secondAttribute="bottom" constant="20" id="iwd-BD-9Fx"/>
+                            <constraint firstItem="Mdf-3K-h1F" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="mfp-dE-Lqb"/>
+                            <constraint firstItem="Khb-d2-3l2" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="sHv-Q0-upP"/>
+                            <constraint firstAttribute="bottom" secondItem="Mdf-3K-h1F" secondAttribute="bottom" id="sV2-co-G9s"/>
+                            <constraint firstItem="x06-2q-7hf" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="sgn-EU-WJ2"/>
+                            <constraint firstItem="BSy-JG-Obd" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="vJK-Sb-TSD"/>
+                            <constraint firstItem="Khb-d2-3l2" firstAttribute="top" secondItem="JxJ-4r-Ovd" secondAttribute="bottom" constant="12" id="vbu-ZQ-myP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -104,7 +134,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="BG" width="375" height="667"/>
+        <image name="centerNavButton" width="58" height="58"/>
         <image name="second" width="30" height="30"/>
+        <image name="startRunningButton" width="71" height="71"/>
+        <image name="tabbar-runIconGray" width="27" height="28"/>
     </resources>
 </document>
