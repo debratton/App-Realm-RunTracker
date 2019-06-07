@@ -1,5 +1,5 @@
 //
-//  BeginRunVC.swift
+//  RunLogVC.swift
 //  RunTracker
 //
 //  Created by David E Bratton on 6/6/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BeginRunVC: UIViewController {
+class RunLogVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
