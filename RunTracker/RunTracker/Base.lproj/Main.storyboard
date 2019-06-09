@@ -172,6 +172,10 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSN-f3-aUd">
                                 <rect key="frame" x="254" y="552" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="L6v-o4-cg9"/>
+                                    <constraint firstAttribute="height" constant="75" id="XxI-vY-5d7"/>
+                                </constraints>
                                 <state key="normal" image="pauseButton"/>
                                 <connections>
                                     <action selector="pauseBtnPressed:" destination="qAk-f2-cd3" eventType="touchUpInside" id="Twu-2c-Cwa"/>
