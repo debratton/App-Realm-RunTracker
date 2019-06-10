@@ -35,6 +35,10 @@
 		9B20222B22AAFBB00070492E /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B20222A22AAFBB00070492E /* CurrentRunVC.swift */; };
 		9BA6C81322AC3986006B365F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6C81222AC3986006B365F /* Extensions.swift */; };
 		9BA6C81522AD2FA6006B365F /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6C81422AD2FA6006B365F /* Run.swift */; };
+		9BA6C81722AD4167006B365F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6C81622AD4167006B365F /* Constants.swift */; };
+		9BA6C81A22AD66BF006B365F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6C81922AD66BF006B365F /* Helper.swift */; };
+		9BA6C81C22AD6CDF006B365F /* RunCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6C81B22AD6CDF006B365F /* RunCell.swift */; };
+		9BA6C81E22AEB8DB006B365F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6C81D22AEB8DB006B365F /* Location.swift */; };
 		FC00188D5B6FA0E9D7967FF9 /* Pods_RunTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D22432461704C32B9C6A6A5 /* Pods_RunTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +75,10 @@
 		9B20222A22AAFBB00070492E /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		9BA6C81222AC3986006B365F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9BA6C81422AD2FA6006B365F /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		9BA6C81622AD4167006B365F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9BA6C81922AD66BF006B365F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9BA6C81B22AD6CDF006B365F /* RunCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCell.swift; sourceTree = "<group>"; };
+		9BA6C81D22AEB8DB006B365F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C400E68E6AFD58DF9DB31EEB /* Pods-RunTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunTracker/Pods-RunTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +132,7 @@
 		9B2021E522A9C5680070492E /* RunTracker */ = {
 			isa = PBXGroup;
 			children = (
+				9BA6C81822AD66AB006B365F /* Helper */,
 				9B20220122A9C8800070492E /* Resources */,
 				9B20220022A9C78D0070492E /* Extensions */,
 				9B2021FF22A9C7820070492E /* Utilities */,
@@ -153,6 +162,7 @@
 		9B2021FD22A9C7730070492E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9BA6C81B22AD6CDF006B365F /* RunCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				9BA6C81422AD2FA6006B365F /* Run.swift */,
+				9BA6C81D22AEB8DB006B365F /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 		9B2021FF22A9C7820070492E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9BA6C81622AD4167006B365F /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -203,6 +215,14 @@
 				9B20221022AABD210070492E /* Montserrat-ThinItalic.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9BA6C81822AD66AB006B365F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9BA6C81922AD66BF006B365F /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,10 +358,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B20222B22AAFBB00070492E /* CurrentRunVC.swift in Sources */,
+				9BA6C81E22AEB8DB006B365F /* Location.swift in Sources */,
 				9BA6C81322AC3986006B365F /* Extensions.swift in Sources */,
 				9B2021EB22A9C5680070492E /* RunLogVC.swift in Sources */,
+				9BA6C81C22AD6CDF006B365F /* RunCell.swift in Sources */,
 				9B20222922AAF6140070492E /* LocationVC.swift in Sources */,
 				9B2021E722A9C5680070492E /* AppDelegate.swift in Sources */,
+				9BA6C81A22AD66BF006B365F /* Helper.swift in Sources */,
+				9BA6C81722AD4167006B365F /* Constants.swift in Sources */,
 				9BA6C81522AD2FA6006B365F /* Run.swift in Sources */,
 				9B2021E922A9C5680070492E /* BeginRunVC.swift in Sources */,
 			);

@@ -25,6 +25,8 @@ class CurrentRunVC: LocationVC {
     var runDistance = 0.0
     var pace = 0
     var counter = 0
+    var latitudeLocation = 0.0
+    var longitudeLocation = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,17 @@ class CurrentRunVC: LocationVC {
     
     func endRun() {
         manager?.stopUpdatingLocation()
-        //ADD TO REALM
+        //Run.saveRun(pace: pace, distance: runDistance, duration: counter)
+        let newRun = Run()
+        newRun.pace = pace
+        newRun.distance = runDistance
+        newRun.duration = counter
+        Helper.saveRun(run: newRun)
+        
+        let newLocation = Location()
+        newLocation.latitude = latitudeLocation
+        newLocation.longitude = longitudeLocation
+        Helper.saveLocation(run: newRun, location: newLocation)
     }
     
     func pauseRun() {
@@ -121,6 +133,8 @@ extension CurrentRunVC: CLLocationManagerDelegate {
             startLocation = locations.first
         } else if let location = locations.last {
             runDistance += lastLocation.distance(from: location)
+            latitudeLocation = Double(lastLocation.coordinate.latitude)
+            longitudeLocation = Double(lastLocation.coordinate.longitude)
             distanceLabel.text = "\(runDistance.metersToMiles(places: 2))"
             if counter > 0 && runDistance > 0 {
                 paceLabel.text = calculatePace(time: counter, miles: runDistance.metersToMiles(places: 2))
